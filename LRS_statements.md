@@ -138,8 +138,7 @@ This statement is generated when a user tags a document. This is typically used 
         }
     },
     "verb":{
-        "id":"https://w3id.org/xapi/adb/verbs/annotated
-", 
+        "id":"https://w3id.org/xapi/adb/verbs/annotated", 
         "display":{
             "en-GB":"annotated"
         }, 
