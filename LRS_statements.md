@@ -44,7 +44,7 @@ This statement is generated when a user creates a new document on codecircle. No
 ```
 
 ## Fork a document
-This is created when a user forks an existing document on codecircle. The context property provides access to the original document. 
+This is created when a user forks an existing document on codecircle. The context property provides information about the original document. 
 
 ```Javascript
 {
