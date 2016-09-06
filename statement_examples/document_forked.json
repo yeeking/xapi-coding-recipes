@@ -11,7 +11,7 @@
     "verb":{
     	"id":"http://xapi.vocab.pub:8890/describe/?url=http%3A%2F%2Fwww.openlinksw.com%2Fschemas%2Fgithub%23forks&sid=4013&urilookup=1", 
         "display":{
-            "en-GB":"forked"
+            "en":"forked"
         }, 
 
     },

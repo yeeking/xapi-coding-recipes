@@ -11,155 +11,25 @@ It was originally developed to support analysis of data from our CodeCircle syst
 * [Edit a document](#edit-a-document)
 * [Tag a document](#tag-a-document)
 
+
 ## Initialise a document
-This statement is generated when a user creates a new document on codecircle. Note this does not happen when they fork an existing document. 
-```
-{
-    "id": "12345678-1234-5678-1234-567812345678",
-    "actor":{
-        "name":"Matthew", 
-        "objectType":"Agent", 
-        "account": {
-            "homePage": "http://live.codecircle.com/s/@username",
-            "name": "cc_mongo_user_id"
-        }
-    },
-    "verb":{
-    	"id":"http://adlnet.gov/expapi/verbs/initialized", 
-        "display":{
-            "en-GB":"initialised", 
-            "en-US":"initialized"
-        }, 
+This statement is generated when a user creates a new document on codecircle. An example can be found in statement_examples/document_initialised.json.  Note this does not happen when they fork an existing document - for that we have the fork statement. 
 
-    },
-    "object": {
-    	"objectType": "Activity"
-    	"id": "http://live.codecircle.com/<docId>",
-	    "definition": 
-	    	{"name":
-	    		{"en-US":"CodeCircle Document title"},
-	    "description":
-	    		{"en-US":"A document in CodeCircle system"}
-	    	}
+## Open a document for editing (launch)
+This statement is generated when a user loads up a pre-existing document, for editing or just for viewing. It will also be generated when the user creates or forks a document, since the new document will be opened after this event. An example can be found in statement_examples/document_launched.json.
 
-}
-```
+## End a document viewing session (suspemd)
+This statement is generated when a user has previously opened a document but has not generatred any system events for a certain period. The length of the period of inactivity should probably be  specified in the data. An example can be found in statement_examples/session_suspended.json.
 
 ## Fork a document
-This is created when a user forks an existing document on codecircle. The context property provides information about the original document. 
+This is created when a user forks an existing document on codecircle. The context property provides information about the original document. An example can be found in statement_examples/document_forked.json. 
 
-```Javascript
-{
-    "id": "12345678-1234-5678-1234-567812345678",
-    "actor":{
-     	"name":"Matthew", 
-     	"objectType":"Agent", 
-        "account": {
-        	"homePage": "http://live.codecircle.com/s/@username",
-	        "name": "cc_mongo_user_id"
-    	}
-    },
-    "verb":{
-    	"id":"http://xapi.vocab.pub:8890/describe/?url=http%3A%2F%2Fwww.openlinksw.com%2Fschemas%2Fgithub%23forks&sid=4013&urilookup=1", 
-        "display":{
-            "en-GB":"forked"
-        }, 
-
-    },
-    "object": {
-    	"objectType": "Activity"
-    	"id": "http://live.codecircle.com/<docId>",
-	    "definition": {
-             "name":
-	    		{"en-US":"CodeCircle Document title"},
-	         "description":
-	    		{"en-US":"A document in CodeCircle system"}
-	    }
-    }
-    "context": {
-        "contextActivities":{
-            "parent": { "id": "http://live.codecircle.com/<docId_that_was_forked>" },
-        }
-    }
-}
-```
 
 ## Edit a document
-This statement is generated for every edit that is made to a document. Since Codecircle uses an implementation of operational transformation to maintain the document content (allowing realtime, collaborative editing), it necessarily logs every edit or 'operation' that is made. The result object is used to specify the success of the edit (does the code pass through the jshint/ other code checker or not) and the raw score, which is the number of characters in the edit (often == 1, but sometimes more, when they copy paste, for example.). 
+This statement is generated for every edit that is made to a document. Since Codecircle uses an implementation of operational transformation to maintain the document content (allowing realtime, collaborative editing), it necessarily logs every edit or 'operation' that is made. The result object is used to specify the success of the edit (does the code pass through the jshint/ other code checker or not) and the raw score, which is the number of characters in the edit (often == 1, but sometimes more, when they copy paste, for example.). An example can be found in statement_examples/document_edited.json.
 
-```Javascript
-{
-    "id": "12345678-1234-5678-1234-567812345678",
-    "actor":{
-        "name":"Matthew", 
-        "objectType":"Agent", 
-        "account": {
-            "homePage": "http://live.codecircle.com/s/@username",
-            "name": "cc_mongo_user_id"
-        }
-    },
-    "verb":{
-    	"id":"https://w3id.org/xapi/acrossx/verbs/edited", 
-        "display":{
-            "en-GB":"edited"
-        }, 
-
-    },
-    "object": {
-    	"objectType": "Activity"
-    	"id": "http://live.codecircle.com/<docId>",
-	    "definition": {
-	       "name":
-	    		{"en-US":"CodeCircle Document"},
-	       "description":
-	    		{"en-US":"A document in CodeCircle system"}
-	    }
-    ], 
-    "result": {
-        "success": true,
-        "score": {
-            "raw": 100
-        }
-    }
-}
-```
 
 ## Tag a document 
-This statement is generated when a user tags a document. This is typically used during lessons to allow simple document sets to be created. 
-
-
-```Javascript
-{
-    "id": "12345678-1234-5678-1234-567812345678",
-    "actor":{
-        "name":"Matthew", 
-        "objectType":"Agent", 
-        "account": {
-            "homePage": "http://live.codecircle.com/s/@username",
-            "name": "cc_mongo_user_id"
-        }
-    },
-    "verb":{
-        "id":"https://w3id.org/xapi/adb/verbs/annotated", 
-        "display":{
-            "en-GB":"annotated"
-        }, 
-
-    },
-    "object": {
-        "objectType": "Activity"
-        "id": "http://live.codecircle.com/<docId>",
-        "definition": 
-            {"name":
-                {"en-US":"CodeCircle Document title"},
-        "description":
-                {"en-US":"A document in CodeCircle system"}
-            }
-
-}
-```
-
-
-
+This statement is generated when a user tags a document. This is typically used during lessons to allow simple document sets to be created. An example can be found in statement_examples/document_annotated.json.
 
 

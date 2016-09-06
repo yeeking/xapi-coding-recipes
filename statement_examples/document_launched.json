@@ -11,7 +11,7 @@
     "verb":{
     	"id":"http://adlnet.gov/expapi/verbs/launched", 
         "display":{
-            "en-GB":"launched", 
+            "en":"launched", 
         }, 
     },
     "object": {

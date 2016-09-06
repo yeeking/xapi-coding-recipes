@@ -11,7 +11,7 @@
     "verb":{
     	"id":"http://adlnet.gov/expapi/verbs/suspended", 
         "display":{
-            "en-GB":"suspended", 
+            "en":"suspended", 
         }, 
     },
 
