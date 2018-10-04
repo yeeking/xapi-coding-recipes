@@ -9,10 +9,10 @@
         },
         "timestamp": 1533575800605,
         "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/received_peer_grade",
                 "display": {
-                        "en-US": "used_callexpression"
-                },
-                "id": "http://activitystrea.ms/schema/1.0/use_callexpression"
+                        "en-US": "received_peer_grade"
+                }
         },
         "context": {
                 "instructor": {
@@ -43,23 +43,23 @@
                 }
         },
         "result": {
+                "completion": true,
                 "score": {
-                        "raw": 1
+                        "scaled": 0.5
                 },
                 "success": true
         },
         "object": {
-                "objectType": "Activity",
                 "definition": {
-                        "type": "http://live.codecircle.com/xapi/functionnames/",
                         "description": {
-                                "en-US": "A call expression in a Code Circle document"
+                                "en-US": "A document in the CodeCircle system"
                         },
                         "name": {
-                                "en-US": "testMe"
+                                "en-US": "code in document BsR6p3RKvuHGb7Nqm"
                         }
                 },
-                "id": "http://live.codecircle.com/xapi/functionnames/testMe"
+                "id": "https://codecircle.gold.ac.uk/d/BsR6p3RKvuHGb7Nqm",
+                "objectType": "Activity"
         },
         "stored": "2018-10-04T11:49:21.495913+01:00"
 }

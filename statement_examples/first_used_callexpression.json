@@ -1,69 +1,65 @@
 {
-  "actor": {
-    "name": "matthew123",
-    "objectType": "Agent",
-    "account": {
-      "name": "matthew123",
-      "homePage": "https://live.codecircle.com"
-    }
-  },
-  "result": {
-    "score": {
-      "raw": 1
-    },
-    "success": true
-  },
-  "verb": {
-    "id": "http://activitystrea.ms/schema/1.0/first_use_callexpression",
-    "display": {
-      "en-US": "first_used_callexpression"
-    }
-  },
-  "timestamp": 1537442066900,
-  "context": {
-    "instructor": {
-      "name": "codecircle_jshint",
-      "objectType": "Agent",
-      "account": {
-        "name": "codecircle_jshint",
-        "homePage": "http://live.codecircle.com/"
-      }
-    },
-    "contextActivities": {
-      "parent": [
-        {
-          "id": "https://live.codecircle.com/d/S5jTff3tBCD3Rtd7g",
-          "objectType": "Activity",
-          "definition": {
-            "description": {
-              "en-US": "A document in the Code Circle system"
-            },
-            "name": {
-              "en-US": "S5jTff3tBCD3Rtd7g"
-            }
-          }
+        "actor": {
+                "name": "matthew123",
+                "objectType": "Agent",
+                "account": {
+                        "name": "matthew123",
+                        "homePage": "https://live.codecircle.com"
+                }
+        },
+        "result": {
+                "score": {
+                        "raw": 1
+                },
+                "success": true
+        },
+        "verb": {
+                "id": "http://activitystrea.ms/schema/1.0/first_use_callexpression",
+                "display": {
+                        "en-US": "first_used_callexpression"
+                }
+        },
+        "timestamp": 1537442066900,
+        "context": {
+                "instructor": {
+                        "name": "codecircle_jshint",
+                        "objectType": "Agent",
+                        "account": {
+                                "name": "codecircle_jshint",
+                                "homePage": "http://live.codecircle.com/"
+                        }
+                },
+                "contextActivities": {
+                        "parent": [{
+                                "id": "https://live.codecircle.com/d/S5jTff3tBCD3Rtd7g",
+                                "objectType": "Activity",
+                                "definition": {
+                                        "description": {
+                                                "en-US": "A document in the Code Circle system"
+                                        },
+                                        "name": {
+                                                "en-US": "S5jTff3tBCD3Rtd7g"
+                                        }
+                                }
+                        }],
+                        "category": [{
+                                "id": "http://live.codecircle.com/xapi/categories/writing+code",
+                                "objectType": "Activity"
+                        }]
+                }
+        },
+        "stored": "2018-10-04T11:45:53.544091+01:00",
+        "object": {
+                "id": "http://live.codecircle.com/xapi/functionnames/calledThreeTimes",
+                "objectType": "Activity",
+                "definition": {
+                        "description": {
+                                "en-US": "A call expression in a Code Circle document"
+                        },
+                        "name": {
+                                "en-US": "calledThreeTimes"
+                        },
+                        "type": "http://live.codecircle.com/xapi/functionnames/"
+                }
         }
-      ],
-      "category": [
-        {
-          "id": "http://live.codecircle.com/xapi/categories/writing+code",
-          "objectType": "Activity"
-        }
-      ]
-    }
-  },
-  "stored": "2018-10-04T11:45:53.544091+01:00",
-  "object": {
-    "id": "http://live.codecircle.com/xapi/functionnames/calledThreeTimes",
-    "objectType": "Activity",
-    "definition": {
-      "description": {
-        "en-US": "A call expression in a Code Circle document"
-      },
-      "name": {
-        "en-US": "calledThreeTimes"
-      },
-      "type": "http://live.codecircle.com/xapi/functionnames/"
-    }
-  }
 }
