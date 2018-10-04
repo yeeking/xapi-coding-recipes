@@ -1,0 +1,64 @@
+{
+        "actor": {
+                "objectType": "Agent",
+                "name": "EzNbL6TyJmKw5hmTT",
+                "account": {
+                        "homePage": "https://codecircle.gold.ac.uk",
+                        "name": "EzNbL6TyJmKw5hmTT"
+                }
+        },
+        "object": {
+                "objectType": "Activity",
+                "definition": {
+                        "description": {
+                                "en-US": "A document in the CodeCircle system"
+                        },
+                        "name": {
+                                "en-US": "code in document BsR6p3RKvuHGb7Nqm"
+                        }
+                },
+                "id": "https://codecircle.gold.ac.uk/d/BsR6p3RKvuHGb7Nqm"
+        },
+        "timestamp": "2016-02-06T13:40:14.041000+00:00",
+        "context": {
+                "contextActivities": {
+                        "parent": [{
+                                "definition": {
+                                        "description": {
+                                                "en-US": "A document in the Code Circle system"
+                                        },
+                                        "name": {
+                                                "en-US": "BsR6p3RKvuHGb7Nqm"
+                                        }
+                                },
+                                "objectType": "Activity",
+                                "id": "https://live.codecircle.com/d/BsR6p3RKvuHGb7Nqm"
+                        }],
+                        "category": [{
+                                "objectType": "Activity",
+                                "id": "http://live.codecircle.com/xapi/categories/codecircle_lesson"
+                        }]
+                },
+                "instructor": {
+                        "objectType": "Agent",
+                        "name": "codecircle_jshint",
+                        "account": {
+                                "homePage": "http://live.codecircle.com/",
+                                "name": "codecircle_jshint"
+                        }
+                }
+        },
+        "stored": "2018-10-04T11:52:59.338850+01:00",
+        "verb": {
+                "display": {
+                        "en-US": "deleted_code"
+                },
+                "id": "https://w3id.org/xapi/acrossx/verbs/deleted_code"
+        },
+        "result": {
+                "score": {
+                        "raw": 0
+                },
+                "success": true
+        }
+}
